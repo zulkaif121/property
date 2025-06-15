@@ -1,0 +1,31 @@
+services:
+  web:
+    build: .
+    command: gunicorn property.wsgi:application --bind 0.0.0.0:8000 --workers 2 --log-level debug --access-logfile /app/logs/access.log --error-logfile /app/logs/error.log
+    volumes:
+      - .:/app
+      - ./media:/app/media
+      - ./logs:/app/logs
+    env_file:
+      - .env
+    environment:
+      MANAGE_PY_MIGRATE: 'on'
+      DJANGO_SUPERUSER_USERNAME: 'admin'
+      DJANGO_SUPERUSER_PASS: 'property@144'
+      DJANGO_SETTINGS_MODULE: property.settings
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+  db:
+    image: postgres:15
+    volumes:
+      - postgres_data_prop:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+
+
+volumes:
+  postgres_data_prop:
