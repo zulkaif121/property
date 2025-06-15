@@ -10,8 +10,6 @@ services:
       - .env
     environment:
       MANAGE_PY_MIGRATE: 'on'
-      DJANGO_SUPERUSER_USERNAME: 'admin'
-      DJANGO_SUPERUSER_PASS: 'property@144'
       DJANGO_SETTINGS_MODULE: property.settings
     depends_on:
       - db
