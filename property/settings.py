@@ -29,7 +29,7 @@ ALLOWED_HOSTS = ["*"]
 ADMIN_URL = "admin/"
 
 # Application definition
-
+AUTH_USER_MODEL="accounts.CustomUser"
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'accounts',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'properties'
 ]
 
 MIDDLEWARE = [
@@ -73,6 +77,16 @@ WSGI_APPLICATION = 'property.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',  # must be here
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+}
+
 
 
 DATABASES = {

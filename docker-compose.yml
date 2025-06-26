@@ -12,13 +12,13 @@ services:
       MANAGE_PY_MIGRATE: 'on'
       DJANGO_SETTINGS_MODULE: property.settings
     depends_on:
-      - db
+      - db_v4
     ports:
       - "8000:8000"
-  db:
+  db_v4:
     image: postgres:15
     volumes:
-      - postgres_data_prop:/var/lib/postgresql/data/
+      - postgres_data_prop_v4:/var/lib/postgresql/data/
     environment:
       POSTGRES_DB: ${DB_NAME}
       POSTGRES_USER: ${DB_USER}
@@ -26,4 +26,4 @@ services:
 
 
 volumes:
-  postgres_data_prop:
+  postgres_data_prop_v4:
