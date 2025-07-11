@@ -12126,3 +12126,380 @@ ImportError: cannot import name 'ProperyImageSerializer' from 'properties.serial
 [2025-06-26 19:16:40 +0000] [7] [INFO] Worker exiting (pid: 7)
 [2025-06-26 19:16:40 +0000] [8] [INFO] Worker exiting (pid: 8)
 [2025-06-26 19:16:40 +0000] [1] [INFO] Shutting down: Master
+[2025-06-26 19:30:05 +0000] [1] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /app
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 0
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1', '::1']
+  accesslog: /app/logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /app/logs/error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: property.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0xef4550128e00>
+  on_reload: <function OnReload.on_reload at 0xef4550128f40>
+  when_ready: <function WhenReady.when_ready at 0xef4550129080>
+  pre_fork: <function Prefork.pre_fork at 0xef45501291c0>
+  post_fork: <function Postfork.post_fork at 0xef4550129300>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0xef4550129440>
+  worker_int: <function WorkerInt.worker_int at 0xef4550129580>
+  worker_abort: <function WorkerAbort.worker_abort at 0xef45501296c0>
+  pre_exec: <function PreExec.pre_exec at 0xef4550129800>
+  pre_request: <function PreRequest.pre_request at 0xef4550129940>
+  post_request: <function PostRequest.post_request at 0xef45501299e0>
+  child_exit: <function ChildExit.child_exit at 0xef4550129b20>
+  worker_exit: <function WorkerExit.worker_exit at 0xef4550129c60>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0xef4550129da0>
+  on_exit: <function OnExit.on_exit at 0xef4550129ee0>
+  ssl_context: <function NewSSLContext.ssl_context at 0xef455012a0c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1', '::1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  permit_obsolete_folding: False
+  strip_header_spaces: False
+  permit_unconventional_http_method: False
+  permit_unconventional_http_version: False
+  casefold_http_method: False
+  forwarder_headers: ['SCRIPT_NAME', 'PATH_INFO']
+  header_map: drop
+[2025-06-26 19:30:05 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-06-26 19:30:05 +0000] [1] [DEBUG] Arbiter booted
+[2025-06-26 19:30:05 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-06-26 19:30:05 +0000] [1] [INFO] Using worker: sync
+[2025-06-26 19:30:05 +0000] [7] [INFO] Booting worker with pid: 7
+[2025-06-26 19:30:05 +0000] [8] [INFO] Booting worker with pid: 8
+[2025-06-26 19:30:05 +0000] [1] [DEBUG] 2 workers
+[2025-06-26 19:31:03 +0000] [7] [DEBUG] GET /api/property/
+[2025-06-26 19:31:21 +0000] [7] [DEBUG] GET /admin/properties/property/
+[2025-06-26 19:31:21 +0000] [7] [DEBUG] GET /admin/jsi18n/
+[2025-06-26 19:31:23 +0000] [7] [DEBUG] GET /admin/properties/property/add/
+[2025-06-26 19:31:23 +0000] [7] [DEBUG] GET /admin/jsi18n/
+[2025-06-26 19:31:25 +0000] [7] [DEBUG] GET /admin/properties/propertyimage/
+[2025-06-26 19:31:25 +0000] [7] [DEBUG] GET /admin/jsi18n/
+[2025-06-26 19:31:30 +0000] [7] [DEBUG] GET /admin/properties/propertyimage/add/
+[2025-06-26 19:31:30 +0000] [7] [DEBUG] GET /static/admin/img/icon-viewlink.svg
+[2025-06-26 19:31:30 +0000] [8] [DEBUG] GET /admin/jsi18n/
+[2025-06-26 19:31:35 +0000] [8] [DEBUG] GET /admin/properties/propertyimage/
+[2025-06-26 19:31:39 +0000] [8] [DEBUG] GET /admin/properties/property/
+[2025-06-26 19:31:39 +0000] [8] [DEBUG] GET /admin/jsi18n/
+[2025-06-26 19:31:41 +0000] [7] [DEBUG] GET /admin/properties/property/add/
+[2025-06-26 19:31:41 +0000] [7] [DEBUG] GET /admin/jsi18n/
+[2025-06-26 19:31:49 +0000] [7] [DEBUG] GET /static/admin/img/calendar-icons.svg
+[2025-06-26 19:31:54 +0000] [7] [DEBUG] POST /admin/properties/property/add/
+[2025-06-26 19:31:54 +0000] [7] [DEBUG] GET /admin/properties/property/
+[2025-06-26 19:31:54 +0000] [7] [DEBUG] GET /admin/jsi18n/
+[2025-06-26 19:31:57 +0000] [7] [DEBUG] GET /admin/properties/propertyimage/
+[2025-06-26 19:31:57 +0000] [7] [DEBUG] GET /admin/jsi18n/
+[2025-06-26 19:31:59 +0000] [7] [DEBUG] GET /admin/properties/propertyimage/add/
+[2025-06-26 19:31:59 +0000] [7] [DEBUG] GET /admin/jsi18n/
+[2025-06-26 19:31:59 +0000] [8] [DEBUG] GET /static/admin/img/icon-viewlink.svg
+[2025-06-26 19:32:06 +0000] [7] [DEBUG] POST /admin/properties/propertyimage/add/
+[2025-06-26 19:32:06 +0000] [7] [DEBUG] GET /admin/properties/propertyimage/
+[2025-06-26 19:32:07 +0000] [7] [DEBUG] GET /admin/jsi18n/
+[2025-06-26 19:32:10 +0000] [7] [DEBUG] GET /api/property/
+[2025-06-26 19:43:45 +0000] [1] [INFO] Handling signal: term
+[2025-06-26 19:43:45 +0000] [7] [INFO] Worker exiting (pid: 7)
+[2025-06-26 19:43:45 +0000] [8] [INFO] Worker exiting (pid: 8)
+[2025-06-26 19:43:46 +0000] [1] [INFO] Shutting down: Master
+[2025-07-03 16:12:54 +0000] [1] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /app
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 0
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1', '::1']
+  accesslog: /app/logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /app/logs/error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: property.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0xeb1f42748e00>
+  on_reload: <function OnReload.on_reload at 0xeb1f42748f40>
+  when_ready: <function WhenReady.when_ready at 0xeb1f42749080>
+  pre_fork: <function Prefork.pre_fork at 0xeb1f427491c0>
+  post_fork: <function Postfork.post_fork at 0xeb1f42749300>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0xeb1f42749440>
+  worker_int: <function WorkerInt.worker_int at 0xeb1f42749580>
+  worker_abort: <function WorkerAbort.worker_abort at 0xeb1f427496c0>
+  pre_exec: <function PreExec.pre_exec at 0xeb1f42749800>
+  pre_request: <function PreRequest.pre_request at 0xeb1f42749940>
+  post_request: <function PostRequest.post_request at 0xeb1f427499e0>
+  child_exit: <function ChildExit.child_exit at 0xeb1f42749b20>
+  worker_exit: <function WorkerExit.worker_exit at 0xeb1f42749c60>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0xeb1f42749da0>
+  on_exit: <function OnExit.on_exit at 0xeb1f42749ee0>
+  ssl_context: <function NewSSLContext.ssl_context at 0xeb1f4274a0c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1', '::1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  permit_obsolete_folding: False
+  strip_header_spaces: False
+  permit_unconventional_http_method: False
+  permit_unconventional_http_version: False
+  casefold_http_method: False
+  forwarder_headers: ['SCRIPT_NAME', 'PATH_INFO']
+  header_map: drop
+[2025-07-03 16:12:54 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-07-03 16:12:54 +0000] [1] [DEBUG] Arbiter booted
+[2025-07-03 16:12:54 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-07-03 16:12:54 +0000] [1] [INFO] Using worker: sync
+[2025-07-03 16:12:54 +0000] [7] [INFO] Booting worker with pid: 7
+[2025-07-03 16:12:54 +0000] [8] [INFO] Booting worker with pid: 8
+[2025-07-03 16:12:54 +0000] [1] [DEBUG] 2 workers
+[2025-07-03 16:12:57 +0000] [7] [DEBUG] POST /api/property
+[2025-07-03 16:13:03 +0000] [8] [DEBUG] GET /api/property
+[2025-07-03 16:13:03 +0000] [8] [DEBUG] GET /api/property/
+[2025-07-03 16:13:28 +0000] [7] [DEBUG] GET /api/property
+[2025-07-03 16:13:28 +0000] [8] [DEBUG] GET /api/property/
+[2025-07-03 16:16:08 +0000] [8] [DEBUG] POST /api/user/users/login
+[2025-07-03 16:16:15 +0000] [7] [DEBUG] POST /api/user/users/login/
+[2025-07-03 16:16:51 +0000] [8] [DEBUG] POST /api/user/login/
+[2025-07-03 16:17:15 +0000] [7] [DEBUG] GET /admin/login
+[2025-07-03 16:17:15 +0000] [7] [DEBUG] GET /admin/login/
+[2025-07-03 16:17:15 +0000] [7] [DEBUG] GET /static/admin/css/responsive.css
+[2025-07-03 16:17:15 +0000] [8] [DEBUG] GET /static/admin/css/nav_sidebar.css
+[2025-07-03 16:17:15 +0000] [7] [DEBUG] GET /static/admin/css/base.css
+[2025-07-03 16:17:15 +0000] [8] [DEBUG] GET /static/admin/css/login.css
+[2025-07-03 16:17:15 +0000] [7] [DEBUG] GET /static/admin/css/dark_mode.css
+[2025-07-03 16:17:15 +0000] [8] [DEBUG] GET /static/admin/js/theme.js
+[2025-07-03 16:17:15 +0000] [7] [DEBUG] GET /static/admin/js/nav_sidebar.js
+[2025-07-03 16:17:27 +0000] [8] [DEBUG] POST /admin/login/
+[2025-07-03 16:17:27 +0000] [8] [DEBUG] GET /admin/login
+[2025-07-03 16:17:27 +0000] [8] [DEBUG] GET /admin/login/
+[2025-07-03 16:17:27 +0000] [8] [DEBUG] GET /admin/
+[2025-07-03 16:17:27 +0000] [8] [DEBUG] GET /static/admin/css/dashboard.css
+[2025-07-03 16:17:27 +0000] [8] [DEBUG] GET /static/admin/img/icon-changelink.svg
+[2025-07-03 16:17:27 +0000] [7] [DEBUG] GET /static/admin/img/icon-addlink.svg
+[2025-07-03 16:17:33 +0000] [8] [DEBUG] POST /api/user/login/
+[2025-07-03 16:17:47 +0000] [7] [DEBUG] POST /api/user/login/
+[2025-07-03 16:21:52 +0000] [8] [DEBUG] Ignored premature client disconnection. No more data after: b"\x16\x03\x01\x02\x00\x01\x00\x01\xfc\x03\x03\t\xad7V\xb3\x08\xa1\xf4p\\?FJ\xd5\xe5\xc1l\xa7\x92\xde<Z\xff\x04\x1dd\nv\xeb\x02_v \xbfk\x9a2(C=!\x17k\xcfx\x94\xaf\xe0\x8f#\xad\xb3\x81K`k\x95H\xe0\xb5\xf5\xf1\xb7\x85\x15\x00*ZZ\x13\x01\x13\x02\x13\x03\xc0,\xc0+\xcc\xa9\xc00\xc0/\xcc\xa8\xc0\n\xc0\t\xc0\x14\xc0\x13\x00\x9d\x00\x9c\x005\x00/\xc0\x08\xc0\x12\x00\n\x01\x00\x01\x89zz\x00\x00\x00\x00\x00\x0e\x00\x0c\x00\x00\tlocalhost\x00\x17\x00\x00\xff\x01\x00\x01\x00\x00\n\x00\x0c\x00\n**\x00\x1d\x00\x17\x00\x18\x00\x19\x00\x0b\x00\x02\x01\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\r\x00\x16\x00\x14\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x08\x05\x05\x01\x08\x06\x06\x01\x02\x01\x00\x12\x00\x00\x003\x00+\x00)**\x00\x01\x00\x00\x1d\x00 \xdf\xee\x82e\x9b\xb7\xab\x13\x92+\xba\x12'\xc9\x85\xe4\x84V\xd8\xf0\x17S*\x18y\xa9\xb8\xa4I\xcc\xefs\x00-\x00\x02\x01\x01\x00+\x00\x0b\n\xca\xca\x03\x04\x03\x03\x03\x02\x03\x01\x00\x1b\x00\x03\x02\x00\x01\xba\xba\x00\x01\x00\x00\x15\x00\xc7\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+[2025-07-03 16:22:06 +0000] [8] [DEBUG] Ignored premature client disconnection. No more data after: b'\x16\x03\x01\x02\x00\x01\x00\x01\xfc\x03\x03\xc5G.\xdb\xa6#IX#h\xf8W"\x00]K\x1e\x05\xa5/\x97\x84\xe2\xc1\xc3\xcbS\x91\x17^d\xdd \xc2\x82\x88\x90\xc1\xf7\xb1\xb4\x84Q\xa4?\xfa>\xb7b\xae/o\xddmO\x80\xa9\xab\xae,^[\xa9\xb6\xcc\x00*\xba\xba\x13\x01\x13\x02\x13\x03\xc0,\xc0+\xcc\xa9\xc00\xc0/\xcc\xa8\xc0\n\xc0\t\xc0\x14\xc0\x13\x00\x9d\x00\x9c\x005\x00/\xc0\x08\xc0\x12\x00\n\x01\x00\x01\x89\n\n\x00\x00\x00\x00\x00\x0e\x00\x0c\x00\x00\tlocalhost\x00\x17\x00\x00\xff\x01\x00\x01\x00\x00\n\x00\x0c\x00\n\x9a\x9a\x00\x1d\x00\x17\x00\x18\x00\x19\x00\x0b\x00\x02\x01\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\r\x00\x16\x00\x14\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x08\x05\x05\x01\x08\x06\x06\x01\x02\x01\x00\x12\x00\x00\x003\x00+\x00)\x9a\x9a\x00\x01\x00\x00\x1d\x00 zHk*_$\x0cq\xf5\xa1\xe8!\x94\xda-\x07\xb8\x06\xa0\xbf\xf8\x9dnu+D\xd0h\xf1\xd5\x023\x00-\x00\x02\x01\x01\x00+\x00\x0b\n\n\n\x03\x04\x03\x03\x03\x02\x03\x01\x00\x1b\x00\x03\x02\x00\x01\x8a\x8a\x00\x01\x00\x00\x15\x00\xc7\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+[2025-07-03 16:37:52 +0000] [7] [DEBUG] Ignored premature client disconnection. No more data after: b'\x16\x03\x01\x02\x00\x01\x00\x01\xfc\x03\x03\x89\x13WkP\rUw\xc6\x88G/\xa6\x8c\x856\xe3;\xfd}\x9e\xc7\xc1;\xb5Qh\xc1\x1aG\x06\xa3 \xc8\xf2QS\x03C\xac\xf3\x95)\xaf\xc7\x8e\xc3\xcb\xe5?\x93<\xd5JM9aV\xc4^\x10\xaa\x9am(\x00*\xda\xda\x13\x01\x13\x02\x13\x03\xc0,\xc0+\xcc\xa9\xc00\xc0/\xcc\xa8\xc0\n\xc0\t\xc0\x14\xc0\x13\x00\x9d\x00\x9c\x005\x00/\xc0\x08\xc0\x12\x00\n\x01\x00\x01\x89ZZ\x00\x00\x00\x00\x00\x0e\x00\x0c\x00\x00\tlocalhost\x00\x17\x00\x00\xff\x01\x00\x01\x00\x00\n\x00\x0c\x00\nZZ\x00\x1d\x00\x17\x00\x18\x00\x19\x00\x0b\x00\x02\x01\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\r\x00\x16\x00\x14\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x08\x05\x05\x01\x08\x06\x06\x01\x02\x01\x00\x12\x00\x00\x003\x00+\x00)ZZ\x00\x01\x00\x00\x1d\x00 }B\x87{>o\xbb9b\x1dQ]\xcc\xb4\xf3\xe9N\x06\x1f\x81\x15i\xf3\xf7Y86VX\xc0\xfb~\x00-\x00\x02\x01\x01\x00+\x00\x0b\n\xba\xba\x03\x04\x03\x03\x03\x02\x03\x01\x00\x1b\x00\x03\x02\x00\x01JJ\x00\x01\x00\x00\x15\x00\xc7\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+[2025-07-03 16:59:20 +0000] [8] [DEBUG] POST /api/user/signup/
+[2025-07-04 08:03:33 +0000] [7] [DEBUG] POST /api/login/
+[2025-07-04 08:03:52 +0000] [1] [INFO] Handling signal: term
+[2025-07-04 08:03:52 +0000] [7] [INFO] Worker exiting (pid: 7)
+[2025-07-04 08:03:52 +0000] [8] [INFO] Worker exiting (pid: 8)
+[2025-07-04 08:03:52 +0000] [1] [INFO] Shutting down: Master
+[2025-07-04 08:04:30 +0000] [1] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /app
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 0
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1', '::1']
+  accesslog: /app/logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /app/logs/error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: property.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0xf1a62e4ece00>
+  on_reload: <function OnReload.on_reload at 0xf1a62e4ecf40>
+  when_ready: <function WhenReady.when_ready at 0xf1a62e4ed080>
+  pre_fork: <function Prefork.pre_fork at 0xf1a62e4ed1c0>
+  post_fork: <function Postfork.post_fork at 0xf1a62e4ed300>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0xf1a62e4ed440>
+  worker_int: <function WorkerInt.worker_int at 0xf1a62e4ed580>
+  worker_abort: <function WorkerAbort.worker_abort at 0xf1a62e4ed6c0>
+  pre_exec: <function PreExec.pre_exec at 0xf1a62e4ed800>
+  pre_request: <function PreRequest.pre_request at 0xf1a62e4ed940>
+  post_request: <function PostRequest.post_request at 0xf1a62e4ed9e0>
+  child_exit: <function ChildExit.child_exit at 0xf1a62e4edb20>
+  worker_exit: <function WorkerExit.worker_exit at 0xf1a62e4edc60>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0xf1a62e4edda0>
+  on_exit: <function OnExit.on_exit at 0xf1a62e4edee0>
+  ssl_context: <function NewSSLContext.ssl_context at 0xf1a62e4ee0c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1', '::1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  permit_obsolete_folding: False
+  strip_header_spaces: False
+  permit_unconventional_http_method: False
+  permit_unconventional_http_version: False
+  casefold_http_method: False
+  forwarder_headers: ['SCRIPT_NAME', 'PATH_INFO']
+  header_map: drop
+[2025-07-04 08:04:30 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2025-07-04 08:04:30 +0000] [1] [DEBUG] Arbiter booted
+[2025-07-04 08:04:30 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2025-07-04 08:04:30 +0000] [1] [INFO] Using worker: sync
+[2025-07-04 08:04:30 +0000] [7] [INFO] Booting worker with pid: 7
+[2025-07-04 08:04:30 +0000] [8] [INFO] Booting worker with pid: 8
+[2025-07-04 08:04:30 +0000] [1] [DEBUG] 2 workers
+[2025-07-04 08:04:38 +0000] [8] [DEBUG] POST /api/user/login/
+[2025-07-04 08:04:53 +0000] [8] [DEBUG] POST /api/user/login/
+[2025-07-04 08:05:37 +0000] [8] [DEBUG] POST /api/products/
+[2025-07-04 08:22:19 +0000] [1] [INFO] Handling signal: term
+[2025-07-04 08:22:19 +0000] [8] [INFO] Worker exiting (pid: 8)
+[2025-07-04 08:22:19 +0000] [7] [INFO] Worker exiting (pid: 7)
+[2025-07-04 08:22:19 +0000] [1] [INFO] Shutting down: Master

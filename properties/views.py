@@ -1,27 +1,45 @@
 from rest_framework import viewsets, status
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
-from properties.models import PropertyImage,Property
-from rest_framework.views import APIView
-from properties.serializers import PropertySerializer
+from properties.models import Property, PropertyImage, PropertyAgent, PropertyReview, PaymentMethod, Booking
+from properties.serializers import (
+    PropertySerializer, PropertyImageSerializer, PropertyAgentSerializer,
+    PropertyReviewSerializer, PaymentMethodSerializer, BookingSerializer
+)
 
 
-class ProperyViewSet(viewsets.ModelViewSet):
+class PropertyViewSet(viewsets.ModelViewSet):
     queryset = Property.objects.all()
     serializer_class = PropertySerializer
-    permission_classes = [AllowAny]  
+    permission_classes = [AllowAny]
 
 
+class PropertyImageViewSet(viewsets.ModelViewSet):
+    queryset = PropertyImage.objects.all()
+    serializer_class = PropertyImageSerializer
+    permission_classes = [AllowAny]
 
-    #def create(self, request, *args, **kwargs):
 
-        #serializer = self.get_serializer(data=request.data)
-        #if serializer.is_valid():
-        #   user = serializer.save()
-        #   token, created = Token.objects.get_or_create(user=user)  
-        #    return Response({
-        #        'user': CustomUserSerializer(user).data,
-        #        'token': token.key 
-        #    }, status=status.HTTP_201_CREATED)
-        #return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+class PropertyAgentViewSet(viewsets.ModelViewSet):
+    queryset = PropertyAgent.objects.all()
+    serializer_class = PropertyAgentSerializer
+    permission_classes = [AllowAny]
+
+
+class PropertyReviewViewSet(viewsets.ModelViewSet):
+    queryset = PropertyReview.objects.all()
+    serializer_class = PropertyReviewSerializer
+    permission_classes = [AllowAny]
+
+
+class PaymentMethodViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = PaymentMethod.objects.filter(is_active=True)
+    serializer_class = PaymentMethodSerializer
+    permission_classes = [AllowAny]
+
+
+class BookingViewSet(viewsets.ModelViewSet):
+    queryset = Booking.objects.all()
+    serializer_class = BookingSerializer
+    permission_classes = [AllowAny]
 
